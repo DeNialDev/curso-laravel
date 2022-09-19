@@ -7,7 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    {{$user -> email}}
     
+    @if (true)
+    {{$name}}
+    {!! $html !!}
+    @else
+        
+    @endif
 </body>
 </html>
