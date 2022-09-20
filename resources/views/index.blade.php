@@ -7,12 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    
-    @if (true)
-    {{$name}}
-    {!! $html !!}
-    @else
-        
-    @endif
+
+
 </body>
 </html>
