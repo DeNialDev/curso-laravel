@@ -8,6 +8,10 @@
     <title>Dashboard</title>
 </head>
 <body>
-@yield('content')
+    @if(session('status'))
+        {{session('status')}}
+    @endif
+ @yield('content')
+
 </body>
 </html>

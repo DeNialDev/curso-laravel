@@ -16,13 +16,17 @@
         @foreach($posts as $p)
             <tr>
                 <td>{{$p->title}}</td>
-                <td>Categoria</td>
+                <td>{{$p->category->title}}</td>
                 <td>{{$p->posted}}</td>
                 <td>
                     <a href="{{route("post.edit", $p)}}">Editar</a>
                     <a href="{{route("post.show", $p)}}">Ver</a>
-                    <a href="{{route("post.destroy", $p)}}">Eliminar</a>
 
+                    <form action="{{route('post.destroy', $p)}}" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <button type="sumbit">Eliminar</button>
+                    </form>
 
                 </td>
             </tr>
